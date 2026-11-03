@@ -2,7 +2,17 @@
 
 Windows desktop player for an Xtream Codes server. It signs in against `player_api.php`, lists live categories and channels, and plays `{server}/live/{user}/{pass}/{stream_id}.ts` inside an embedded VLC window.
 
-## Download and install
+## Download
+
+On 64-bit Windows, download the setup program from the latest release:
+
+[IPTV-Player-Setup.exe](https://github.com/LewisCarter02/iptv-player/releases/latest/download/IPTV-Player-Setup.exe)
+
+Double-click that file. If Windows says it protected your PC, choose **More info**, then **Run anyway**. The setup copies IPTV Player onto this PC, puts an **IPTV Player** shortcut on the desktop, and opens the player. The shortcut uses the application logo.
+
+Playback needs the free 64-bit [VLC media player](https://www.videolan.org/vlc/). If VLC is not already installed, the setup offers to install it.
+
+## Install from source
 
 You need 64-bit Windows and 64-bit Python 3.10 or newer. [Python for Windows](https://www.python.org/downloads/) should be installed with **Add python.exe to PATH** ticked. Git is required for the clone command.
 

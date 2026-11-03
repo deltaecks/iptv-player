@@ -3,5 +3,7 @@ __pycache__/
 .venv/
 venv/
 *.spec
+build/
+dist/
 .idea/
 .vscode/

@@ -4,10 +4,13 @@ from __future__ import annotations
 
 import logging
 import sys
-from pathlib import Path
+
+from windows_setup import prepare_windows_install
 
 
 def main() -> int:
+    if prepare_windows_install():
+        return 0
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
     try:
         from PyQt6.QtCore import Qt
@@ -26,9 +29,11 @@ def main() -> int:
     app = QApplication(sys.argv)
     app.setApplicationName("IPTV Player")
     app.setOrganizationName("IPTVPlayer")
-    icon_file = Path(__file__).resolve().parent / "assets" / "iptv-player.ico"
-    if icon_file.is_file():
-        app.setWindowIcon(QIcon(str(icon_file)))
+    from app_paths import icon_file
+
+    bundled_icon = icon_file()
+    if bundled_icon.is_file():
+        app.setWindowIcon(QIcon(str(bundled_icon)))
 
     from ui_main import MainWindow
 

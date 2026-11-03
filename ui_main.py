@@ -3,8 +3,9 @@
 from __future__ import annotations
 
 from collections import deque
-from pathlib import Path
 from collections.abc import Callable
+
+from app_paths import icon_file as bundled_icon_file
 
 from PyQt6.QtCore import (
     QEvent,
@@ -221,9 +222,9 @@ class MainWindow(QMainWindow):
         self.setWindowTitle(APP_NAME)
         self.resize(1280, 760)
         self.setMinimumSize(960, 600)
-        icon_file = Path(__file__).resolve().parent / "assets" / "iptv-player.ico"
-        if icon_file.is_file():
-            self.setWindowIcon(QIcon(str(icon_file)))
+        icon_path = bundled_icon_file()
+        if icon_path.is_file():
+            self.setWindowIcon(QIcon(str(icon_path)))
         else:
             self.setWindowIcon(self.style().standardIcon(QStyle.StandardPixmap.SP_MediaPlay))
 
