@@ -1,6 +1,16 @@
 # IPTV Player
 
-Windows desktop player for an Xtream Codes server. It signs in against `player_api.php`, lists live categories and channels, and plays `{server}/live/{user}/{pass}/{stream_id}.ts` inside an embedded VLC window.
+Windows desktop player for an Xtream Codes server.
+
+## Legal Disclaimer
+
+**Important Notice:** This software is a generic, open-source media player designed exclusively to parse and stream user-provided Xtream API credentials and playlists. 
+
+* **No Content Supplied:** The developer does not provide, host, bundle, or maintain any media, streams, playlists, or content of any kind. 
+* **User Responsibility:** Users must provide their own legally acquired content or subscription credentials. It is the sole responsibility of the end-user to ensure that their source of content complies with local laws and regulations.
+* **No Endorsement of Infringement:** The developer does not endorse, facilitate, or condone the streaming of copyrighted material without explicit permission from the respective rights holders.
+* **Limitation of Liability:** This application is provided "as is" without warranty of any kind. The developer accepts no liability for any misuse of this software, data loss, or legal actions resulting from copyright infringements committed by the end-user.
+
 
 ## Download
 
